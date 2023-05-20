@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content=""/>
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+	<!-- If Needed -->
+	<meta property="og:locale" content="en_us" />
+    <meta property="og:video" content="" />
+    <meta property="fb:app_id" content="" />
+	<meta property="og:audio" content="" />
+	<!-- ------ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" value="" />
+    <meta name="twitter:url" value="" />
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:label1" value="" />
+    <meta name="twitter:data1" value="" />
+    <meta name="twitter:label2" value="" />
+    <meta name="twitter:data2" value="" />
+    <title>Title</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="" alt="logo" draggable="false">
+        <!--  -->
+        <input type="checkbox" name="" id="" class="check">
+            <div class="ham-menu">
+              <span class="dashes bar-1"></span>
+              <span class="dashes bar-2"></span>
+              <span class="dashes bar-3"></span>
+            </div>
+        <nav>
+            <div class="nav-links">
+                <a href="#" title="">content1</a>
+                <a href="#" title="">content2</a>
+                <a href="#" title="">content3</a>
+                <a href="#" title="">content4</a>
+                <a href="#" title="">content5</a>
+            </div>
+        </nav>
+    </header>
+    <section class="boxed-up">
+        
+    </section>
+    <footer>© Copyright <script>document.write(new Date().getFullYear())</script>. Made by Abbishek</footer>
+    <script src="script.js"></script>
+    <script>
+        // This disables the user from downloading or saving image - right click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        // -----------------------------------------------
+        // This disables the cmd + S and ctrl + S
+        //  This prevents from command + S
+        document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.keyCode === 83) {
+        event.preventDefault();
+        }
+        });
+        //  This prevents from ctrl + S 
+        document.addEventListener('keydown', function(event) {
+        if (event.metaKey && event.keyCode === 83) {
+            event.preventDefault();
+        }
+        });
+    </script>
+</body>
+</html>
