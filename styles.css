@@ -13,10 +13,11 @@ html, body
 }
 :root
 {
-    --primary-color:#fff;
+    --primary-color:#629639;
     --secondary-color:#000;
     --primary-background: #000;
     --secondary-background:#fff;
+    --hover-color:#ffffff69;
 }
 body
 {
@@ -79,6 +80,14 @@ header, nav
     background:var(--primary-background) ;
     padding: 15px;
 }
+header
+{
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+}
 header img
 {
     width: 50px;
@@ -93,7 +102,7 @@ nav .nav-links a
 }
 nav .nav-links a:hover
 {
-    color: var(--primary-color-hover);
+    color: var(--hover-color);
     transition: 0.2s ease-in-out;
 
 }
@@ -114,14 +123,46 @@ nav .nav-links a:nth-child(5):hover
 .check 
 {
     position: absolute;
-    top: 2rem;
-    right: 4rem;
+    top: 3rem;
+    right: 3rem;
     height: 3rem;
     width: 3rem;
     opacity: 0;
     z-index: -100;
     display: none;
 }
+/* -------You can delete these below code --------- */
+.centerer /* ---You can delete these below {centerer} code and it's code when you start coding -------------- */
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+svg {
+	width: 100%; 
+  height: 100%;
+}
+svg text {
+	animation: stroke 10s infinite alternate;
+	stroke-width: 2;
+	stroke: #629639;
+	font-size: 150px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,251,251,0); stroke: #629639;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(255,251,251,0); stroke: #629639; }
+	80%  {fill: rgba(255,251,251,0); stroke: #629639; stroke-width: 3; }
+	100% {
+		fill: rgba(255,251,251,1); stroke: #629639;
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+/* ------------------------------------------------ */
 /* --------------- */
 @media (max-width:991px) {
     /* -Nav-Hamburger- */
@@ -133,12 +174,14 @@ nav .nav-links a:nth-child(5):hover
       {
         flex-direction: column;
         position: absolute;
-        right: 100px;
         top: 0;
-        background: var(--navbar-background);
         justify-content: flex-start;
         z-index: -100;
         opacity: 0;
+        right: 0;
+        background: var(--secondary-background);
+        padding: 0;
+        border-radius: 15px 0px 0px 15px;
       }
       .check 
       {
@@ -161,19 +204,19 @@ nav .nav-links a:nth-child(5):hover
         height: 3rem;
         width: 3rem;
         position: absolute;
-        top: 2.3rem;
-        right: 4.2rem;
+        top: 3.3rem;
+        right: 3.2rem;
         padding: 0.5rem;
         z-index: 5;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: black;
+        background-color: transparent;
         border-radius: 0.25em;
     }
     
     .ham-menu .dashes {
-        background-color: white;
+        background-color: #629639;
         border-radius: 1em;
         width: 2rem;
         height: 0.25rem;
@@ -208,7 +251,8 @@ nav .nav-links a:nth-child(5):hover
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        width: 100%;
+        width: 100%; 
+        margin-left: 50px;
       }
       nav .nav-links a:first-child
       {
@@ -217,12 +261,12 @@ nav .nav-links a:nth-child(5):hover
       nav .nav-links a:nth-child(5)
       {
         width: fit-content;
-        margin-left: 60px;
+        margin-left: 25px;
       }
       nav .nav-links a
       {
         margin: 25px 0;
-        padding-left: 60px;
+        padding-left: 30px;
       }
       .theme
       {
@@ -257,9 +301,28 @@ nav .nav-links a:nth-child(5):hover
       {
         display: none;
       }
+      /* -----delete the below code----- */
+      svg text 
+      {
+        font-size: 75px;
+      }
+      /* ------------------------------ */
+    }
+    @media (max-width: 500px) {
+      /* -----delete the below code----- */
+      svg text 
+      {
+        font-size: 35px;
+      }
     }
 footer
 {
     background: var(--primary-background);
     text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 25px 0;
 }
